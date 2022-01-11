@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GameField It renders 3 cells from data:[3 items] 1`] = `
+exports[`GameField renders 3 cells from data:[3 items] 1`] = `
 <DocumentFragment>
   <section
     class="css-1ce6rfj"

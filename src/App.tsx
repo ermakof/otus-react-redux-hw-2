@@ -18,7 +18,7 @@ const App: FC = () => {
     const cellsNumber = width * height;
     const startCellState = showAll ? CellInfo.alive : CellInfo.dead;
     const newData: CellInfo[] = [];
-    for (let i = 0; i < cellsNumber; i = i+1) {
+    for (let i = 0; i < cellsNumber; i = i + 1) {
       newData.push(startCellState);
     }
     setData(newData);
@@ -32,18 +32,16 @@ const App: FC = () => {
     const newData = data.concat();
     newData[cellId] = getInverted(newData[cellId]);
     setData(newData);
-  }
+  };
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Game of Life
-        </p>
+        <p>Game of Life</p>
       </header>
       <GameField data={data} onCellClick={handleClick} width={width} />
     </div>
   );
-}
+};
 
 export default App;

@@ -15,7 +15,12 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     semi: ['warn', 'always'],
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   overrides: [
     {
@@ -24,5 +29,11 @@ module.exports = {
         'import/no-anonymous-default-export': 'off',
       },
     },
+  ],
+  extends: [
+    'plugin:storybook/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jest/recommended',
   ],
 };

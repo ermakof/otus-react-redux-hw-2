@@ -12,7 +12,7 @@ describe('GameField', () => {
     data = [CellInfo.dead, CellInfo.dead, CellInfo.dead];
   });
 
-  it('It renders 3 cells from data:[3 items]', () => {
+  it('renders 3 cells from data:[3 items]', () => {
     const { asFragment } = render(<GameField data={data} onCellClick={handleClick} width={3} />);
     expect(asFragment()).toMatchSnapshot();
     const cellsGrid = screen.getByRole(/cellsGrid/gi);
@@ -21,7 +21,7 @@ describe('GameField', () => {
     expect(cellContainer.length).toBe(3);
   });
 
-  it('It calls onCellClick(<cell id>) callback when a cell is clicked', () => {
+  it('calls onCellClick(<cell id>) callback when a cell is clicked', () => {
     render(<GameField data={data} onCellClick={handleClick} width={3} />);
     const cellContainer = screen.getAllByRole(/cellContainer/gi);
     fireEvent.click(cellContainer[1]);

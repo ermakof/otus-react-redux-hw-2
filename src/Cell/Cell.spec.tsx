@@ -3,7 +3,7 @@ import { Cell } from '@src/Cell';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('Cell', () => {
-  it('It renders <Cell> using renderer cell with value=2', () => {
+  it('renders <Cell> using renderer cell with value=2', () => {
     const handleClick = jest.fn();
     const { asFragment } = render(<Cell num={2} onClick={handleClick} />);
     expect(asFragment()).toMatchSnapshot();
