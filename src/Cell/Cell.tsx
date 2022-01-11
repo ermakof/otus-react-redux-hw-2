@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { CELL_HEIGHT, CELL_WIDTH } from '@src/cell/constatnts';
+import { CELL_HEIGHT, CELL_WIDTH } from '@src/Cell/constatnts';
 
 interface IContainer {
   isRight?: boolean;
